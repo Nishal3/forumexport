@@ -1,0 +1,47 @@
+Additional Resources:
+
+Our organization has a forum that has been running for quite some time, and we've recently added some
+logic to mark comments on forum posts as positive or negative.
+With this new information, some people without database access would
+like to be able to have the information exported so that they can view reports.
+To facilitate this, we've decided to create a library for interacting with the
+database and models that we can easily utilize in scripts to export information
+in a digestable form for whomever asks us. Our library will only provide models
+for the database tables; the end user will be required to know how to set up a SQLAlchemy engine and session.
+
+The forum database has two tables that we'd like to interact with:
+
+* The posts table, which contains forum posts.
+* The comments table, which contains comments that are associated with posts.
+To model these tables we'll need to know the schema for the tables. Here's how they were created:
+
+create table posts (
+    id SERIAL PRIMARY KEY,
+    body TEXT NOT NULL,
+    author_name VARCHAR(50) NOT NULL,
+    created_on TIMESTAMP NOT NULL DEFAULT NOW()
+);
+create table comments (
+    id SERIAL PRIMARY KEY,
+    post_id INTEGER REFERENCES posts(id),
+    comment TEXT NOT NULL,
+    sentiment VARCHAR(10) NOT NULL,
+    commenter_name VARCHAR(50) NOT NULL,
+    created_on TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+
+
+
+## Learning Objectives
+
+Learning Objectives
+
+
+Set Up a Project and Virtualenv with Pipenv
+
+
+Define the `Post` and `Comment` Classes in a `models` Module
+
+
+Utilize the Library from REPL
