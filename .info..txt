@@ -45,3 +45,29 @@ Define the `Post` and `Comment` Classes in a `models` Module
 
 
 Utilize the Library from REPL
+
+
+
+# Next task
+
+To feel comfortable completing this lab, you'll need to know how to do the following:
+
+* Create a SQLAlchemy engine and session. Watch "Configuring a SQLAlchemy Connection" 
+  from the Programming Use Cases with Python course if you're unfamiliar with how to do this.
+
+* Query a database using SQLAlchemy models. Watch "Utilize the Library to Export CSV" 
+  from the Programming Use Cases with Python course if you're unfamiliar with how to do this.
+
+* Write CSV and JSON documents.
+  Watch the "Utilize the Library to Export CSV" and "Exporting Data as JSON" videos from the
+  Programming Use Cases with Python course if you're unfamiliar with how to do this.
+
+Learning Objectives
+
+-Create a Virtualenv and Install the `forum` Package-
+
+Write the Posts Query in the `export_csv.py` Script
+
+Add the CSV Export to `export_csv.py`
+
+Create the `export_json.py` Script

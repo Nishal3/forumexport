@@ -14,23 +14,7 @@ $ PYTHONPATH=. python
 ```
 
 
-Export data to JSON or CSV by using export_json.py or export_csv.py respectively
-
-Here's what the JSON format looks like
-``` JSON
-[
-    {
-        "id": 1,
-        "body": "This is a great tool",
-        "author_name": "Kevin Bacon",
-        "created_on": "2019-07-04",
-        "comments": 10,
-        "positive_comments": 8,
-        "negative_comments": 2
-    },
-    // ... more JSON objects
-]
-```
+Export data to CSV by using export_csv.py 
 
 Here's what the CSV format looks like
 ``` CSV
